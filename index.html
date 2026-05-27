@@ -1074,7 +1074,7 @@
         .s5-panel-close:hover { background: rgba(0,0,0,0.55); }
         .s5-panel-img { width: 100%; height: 160px; flex-shrink: 0; background: #1a1a2e; transition: background 0.4s ease; }
         .s5-panel-body { padding: 1.25rem 1.5rem 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; flex: 1; }
-        .s5-panel-cat { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .s5-panel-cat { display: block; width: 36px; height: 3px; border-radius: 2px; font-size: 0; line-height: 0; overflow: hidden; }
         .s5-panel-title { font-family: 'Instrument Serif', serif; font-size: 1.3rem; color: var(--text-heading); margin: 0; line-height: 1.2; transition: color 0.35s ease; }
         .s5-panel-desc { font-size: 0.88rem; color: var(--text-body); line-height: 1.55; margin: 0.25rem 0; transition: color 0.35s ease; }
         .s5-panel-points { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.35rem; }
@@ -1217,8 +1217,9 @@
                 <span class="s2-tag">Klātiene</span>
                 <h2 class="s2-heading">Studijas universitātē</h2>
                 <ul class="s2-points">
+                    <li>Studijas universitātes telpās</li>
                     <li>Tiešā komunikācija ar pasniedzējiem</li>
-                    <li>Laboratorijas un iekārtas klātienē</li>
+                    <li>Praktisku darbu un piemēru iespējas</li>
                     <li>Strukturēts dienas ritms</li>
                     <li>Bibliotēka un studiju telpas</li>
                     <li>Grupu darbs un sadarbība</li>
@@ -1239,10 +1240,10 @@
                 <h2 class="s2-heading">Studijas no mājas</h2>
                 <ul class="s2-points">
                     <li>Elastīgs laika grafiks</li>
-                    <li>Lekciju ieraksti pieejami atkārtoti</li>
+                    <li>Pieejami lekciju ieraksti</li>
                     <li>Darbs no mājas komforta</li>
                     <li>Vairāk laika personīgiem projektiem</li>
-                    <li>Mazāk ceļojuma laika</li>
+                    <li>Mazāk laika pavadīts ceļā</li>
                 </ul>
             </div>
             <div class="s2-hint s2-hint-right" id="s2-hint-right">
@@ -1424,7 +1425,7 @@
                 <div class="s4-stat" data-target="18" style="--accent:#22c55e;">
                     <div class="s4-stat-bar"></div>
                     <div class="s4-stat-num"><span class="s4-counter">0</span>h</div>
-                    <div class="s4-stat-label">Brīvs laiks</div>
+                    <div class="s4-stat-label">Brīvais laiks</div>
                     <div class="s4-stat-sub">nedēļā</div>
                 </div>
             </div>
@@ -1487,7 +1488,7 @@
                             <div class="s4-legend-item"><span class="s4-legend-dot" style="background:#3b82f6;"></span> Studijas</div>
                             <div class="s4-legend-item"><span class="s4-legend-dot" style="background:#f59e0b;"></span> QA darbs</div>
                             <div class="s4-legend-item"><span class="s4-legend-dot" style="background:#06b6d4;"></span> Akvaparks</div>
-                            <div class="s4-legend-item"><span class="s4-legend-dot" style="background:#22c55e;"></span> Brīvs laiks</div>
+                            <div class="s4-legend-item"><span class="s4-legend-dot" style="background:#22c55e;"></span> Brīvais laiks</div>
                         </div>
                     </div>
                     <div class="s4-panel-detail" id="s4-panel-detail">
@@ -1538,8 +1539,7 @@
 
         <div class="s5-container">
             <div class="s5-header">
-                <p class="s5-label">Atpūta un hobiji</p>
-                <h2 class="s5-title">Pēc lekcijām</h2>
+                <h2 class="s5-title">Atpūta un hobiji</h2>
                 <p class="s5-subtitle">Kā es atpūšos un uzlādējos pēc garas studiju un darba dienas.</p>
             </div>
 
@@ -1677,11 +1677,11 @@
         // ── SECTION 1: FULLSCREEN TIMELINE ──────────────────────────
         (function() {
             var stops = [
-                { title: "Rīts", desc: "Modinātājs skan, kafija tiek pagatavota — tā sākas katra studenta rīts pirms lekcijām." },
-                { title: "Universitāte", desc: "Ceļš uz LU ar tramvaju, lekcijas un semināri — galvenā dienas daļa." },
-                { title: "Pusdienas", desc: "Pauze starp lekcijām, ēšana universitātes kafejnīcā vai ārā pilsētā." },
-                { title: "Darbs", desc: "QA testēšana attālināti vai maiņa akvaparkā — darbs paralēli studijām." },
-                { title: "Vakars", desc: "Laiks sev — sports, projekti, spēles vai vienkārši atpūta mājās." }
+                { title: "Rīts", desc: "Katrs rīts sākas ar modinātāja signālu blakus gultai. Krūze tējas vienmēr palīdz pamosties, un tā iesākas gandrīz katrs mans rīts pirms skolas dienas." },
+                { title: "Universitāte", desc: "Ceļā uz LU es braucu ar vilcienu, jo dzīvoju Jūrmalā. Lekcijas aizņem lielāko daļu no manas dienas sākuma." },
+                { title: "Pusdienas", desc: "Kad parādās pauzītes starp lekcijām, es parasti aizeju pastaigāties pa Rīgas centru, paēdu LU kafejnīcā vai vienkārši atpūšos." },
+                { title: "Darbs", desc: "Pēc lekcijām, kuras parasti beidzas ap pusdienlaiku, es vai nu braucu uz Bulduriem strādāt akvaparkā par glābēju, vai arī eju uz ofisu turpat pie skolas, kur strādāju par QA speciālistu." },
+                { title: "Vakars", desc: "Vakaros pēc darba, ja ir laiks, aizeju uz treniņu papeldēt vai paskrienu pa stadionu, kas atrodas pie sporta skolas. Vēlāk piestrādāju pie saviem personīgajiem projektiem vai spēlēju videospēles, kamēr acis krīt ciet." }
             ];
 
             var bgLayers = [];
@@ -2064,7 +2064,7 @@
                 studijas: {
                     label: 'Studijas', color: '#3b82f6',
                     bg: "url('assets/images/studijas.jpg') center/cover",
-                    points: ['Klātienes lekcijas Latvijas Universitātē', 'Aktīva piedalīšanās semināros un laboratorijās', 'Mājas darbu sagatavošana pēc lekcijām', 'Eksāmenu gatavošanās paralēli darbam'],
+                    points: ['Lekcijas klātienē', 'Aktīva piedalīšanās lekcijās un semināros', 'Konspektu un piezīmju pierakstīšana', 'Gatavošanās eksāmeniem'],
                     stat: '≈ 14h studijās nedēļā'
                 },
                 qa: {
@@ -2076,13 +2076,13 @@
                 aqua: {
                     label: 'Akvaparks', color: '#06b6d4',
                     bg: "url('assets/images/akvaparks.jpg') center/cover",
-                    points: ['Fizisks darbs — labs kontrasts pret datoru', 'Komandas darbs ar kolēģiem klātienē', 'Aktīva vide un nepārtraukta kustība', 'Papildus ienākumi studiju laikā'],
+                    points: ['Fizisks darbs, lielisks kontrasts datoram', 'Komandas darbs ar kolēģiem klātienē', 'Aktīva vide un nepārtraukta kustība', 'Papildu ienākumi studiju laikā'],
                     stat: '≈ 8h akvaparkā nedēļā'
                 },
                 free: {
-                    label: 'Brīvs laiks', color: '#22c55e',
+                    label: 'Brīvais laiks', color: '#22c55e',
                     bg: "url('assets/images/brīvs laiks.jpg') center/cover",
-                    points: ['Personīgie projekti un eksperimenti', 'Sports — skriešana, peldēšana baseinā', 'Atpūta un enerģijas uzlādēšana', 'Sociāls laiks un hobiji'],
+                    points: ['Personīgie projekti un darbi', 'Sports: skriešana, peldēšana baseinā', 'Atpūta un enerģijas atgūšana', 'Sociāls laiks un hobiji'],
                     stat: '≈ 18h brīvā laikā nedēļā'
                 }
             };
@@ -2176,11 +2176,11 @@
         // ── SECTION 5: Bar carousel ──────────────────────────────────────
         (function() {
             var barData = [
-                { title: 'Peldēšana', color: '#06b6d4', bg: "url('assets/images/peldēšana.jpg') center/cover", desc: 'Baseins pēc garas studiju vai darba dienas — labākais veids kā atslēgties no ekrāniem un sajust sevi.', points: ['Atslēgšanās no ekrāniem', 'Fiziskā forma un izturība', 'Garīgā relaksācija'], detail: '3–4× nedēļā' },
-                { title: 'Skriešana', color: '#22c55e', bg: "url('assets/images/skriešana.jpg') center/cover", desc: 'Pa pilsētas ielām vai parkā — galvu iztīra labāk nekā jebkas. Garmin Forerunner 265 seko progresam.', points: ['Skriešana pa Rīgas parkiem', 'Garmin Forerunner 265 trasēšana', 'Rīgas Rimi pusmaratons'], detail: '2–3× nedēļā' },
-                { title: 'Videospēles', color: '#a259ff', bg: "url('assets/images/brīvs laiks.jpg') center/cover", desc: 'Vakaros — laiks aizmirsties citās pasaulēs. Spēles kā relaksācija un radošs stimuls pēc darba.', points: ['Story-driven single-player spēles', 'Online multiplayer', 'Indie un AAA projekti'], detail: 'Vakaros' },
-                { title: 'Savi projekti', color: '#f59e0b', bg: "url('assets/images/savi projekti.jpg') center/cover", desc: 'Programmēšana priekš sevis — eksperimenti ar jaunām tehnoloģijām bez universitātes prasībām.', points: ['Next.js, React, Tailwind CSS', 'Personīgie rīki un automatizācija', 'Eksperimenti bez noteikumiem'], detail: 'Brīvajos vakaros' },
-                { title: 'Atpūta', color: '#f43f5e', bg: "url('assets/images/vakars.jpg') center/cover", desc: 'Reizēm labākā atpūta ir vienkārši neko nedarīt. Grāmatas, mūzika vai laiks pilnīgi bez ekrāniem.', points: ['Grāmatas un podkāsti', 'Mūzika un relaksācija', 'Laiks bez ekrāniem'], detail: 'Kad vajadzīgs' }
+                { title: 'Peldēšana', color: '#06b6d4', bg: "url('assets/images/peldēšana.jpg') center/cover", desc: 'Baseins pēc garas studiju vai darba dienas ir labākais veids kā atslēgties no ekrāniem un sajust sevi.', points: ['Atslēgšanās no ekrāniem', 'Fiziskā forma un izturība', 'Garīgā relaksācija'], detail: '3–4× nedēļā' },
+                { title: 'Skriešana', color: '#22c55e', bg: "url('assets/images/skriešana.jpg') center/cover", desc: 'Skriešana pa pilsētas ielām vai parkā izvēdina galvu labāk nekā jebkas cits. Mans Garmin Forerunner 265 cītīgi seko līdzi progresam.', points: ['Skriešana pa Rīgas parkiem', 'Garmin Forerunner 265 trasēšana', 'Rīgas Rimi pusmaratons'], detail: '2–3× nedēļā' },
+                { title: 'Videospēles', color: '#a259ff', bg: "url('assets/images/brīvs laiks.jpg') center/cover", desc: 'Vakaros ir laiks pazust citās pasaulēs. Spēles man kalpo kā lieliska relaksācija un radošs stimuls pēc darba.', points: ['Story-driven single-player spēles', 'Online multiplayer', 'Indie un AAA projekti'], detail: 'Vakaros' },
+                { title: 'Savi projekti', color: '#f59e0b', bg: "url('assets/images/savi projekti.jpg') center/cover", desc: 'Programmēšana priekš sevis nozīmē eksperimentus ar jaunām tehnoloģijām brīvā gaisotnē, bez universitātes prasībām un ierobežojumiem.', points: ['Next.js, React, Tailwind CSS', 'Personīgie rīki un automatizācija', 'Eksperimenti bez noteikumiem'], detail: 'Brīvajos vakaros' },
+                { title: 'Atpūta', color: '#f43f5e', bg: "url('assets/images/vakars.jpg') center/cover", desc: 'Dažreiz pati labākā atpūta ir vienkārši neko nedarīt. Grāmatas, mūzika vai laiks pie datora.', points: ['Grāmatas un podkāsti', 'Mūzika un relaksācija', 'Filmas vai spēles datorā'], detail: 'Kad vajadzīgs' }
             ];
 
             var barsEl = document.getElementById('s5-bars');
@@ -2195,7 +2195,7 @@
                 var d = barData[idx];
                 document.getElementById('s5-panel-img').style.background = d.bg;
                 var catEl = document.getElementById('s5-panel-cat');
-                catEl.textContent = d.title; catEl.style.color = d.color;
+                catEl.textContent = ''; catEl.style.backgroundColor = d.color;
                 document.getElementById('s5-panel-title').textContent = d.title;
                 document.getElementById('s5-panel-desc').textContent = d.desc;
                 var ul = document.getElementById('s5-panel-points');
